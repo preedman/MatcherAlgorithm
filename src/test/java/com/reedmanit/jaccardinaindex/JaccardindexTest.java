@@ -42,28 +42,33 @@ public class JaccardindexTest {
 
 
     @Test
+    // 
+    // My way of testing my algorithm.
+    // Accepting the Apache approach is unlikely to be defective, then compare what its value to my value
+    // If the same, then my approach is accurate.
+    //
     public void testSimpleCalculateSimularity() throws Exception {
         System.out.println("calculateSimularity simple");
 
         Simularity sim = new Simularity();
 
-        String A = RandomStringUtils.randomAscii(20);
+        String A = RandomStringUtils.randomAscii(20);   // create some random strings
         String B = RandomStringUtils.randomAscii(15);
 
         
 
-        Double r = calculateApacheSimularity(A.subSequence(0, A.length()), B.subSequence(0, B.length()));
+        Double r = calculateApacheSimularity(A.subSequence(0, A.length()), B.subSequence(0, B.length()));  // calculate the apache simularity
 
         System.out.println("Apache Score is " + r);
         
-        sim.calculate(A.subSequence(0, A.length()), B.subSequence(0, B.length()));
+        sim.calculate(A.subSequence(0, A.length()), B.subSequence(0, B.length()));  // calculate using mine
         
         System.out.println("My Score is " + sim.getSimilarScore());
 
         System.out.println("A " + A.subSequence(0, A.length()));
         System.out.println("B " + B.subSequence(0, B.length()));
 
-        assertEquals(r, sim.getSimilarScore());
+        assertEquals(r, sim.getSimilarScore());  // the two approaches should be equal.
 
     }
 
