@@ -13,7 +13,7 @@ import java.util.Set;
  *
  * @author paul
  */
-public class Simularity {
+public class Simularity implements SimularityAlgorithm {
 
     private Double similarScore;
 
