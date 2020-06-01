@@ -40,7 +40,6 @@ public class JaccardindexTest {
     public void tearDown() {
     }
 
-
     @Test
     // 
     // My way of testing my algorithm.
@@ -55,14 +54,12 @@ public class JaccardindexTest {
         String A = RandomStringUtils.randomAscii(20);   // create some random strings
         String B = RandomStringUtils.randomAscii(15);
 
-        
-
         Double r = calculateApacheSimularity(A.subSequence(0, A.length()), B.subSequence(0, B.length()));  // calculate the apache simularity
 
         System.out.println("Apache Score is " + r);
-        
+
         sim.calculate(A.subSequence(0, A.length()), B.subSequence(0, B.length()));  // calculate using mine
-        
+
         System.out.println("My Score is " + sim.getSimilarScore());
 
         System.out.println("A " + A.subSequence(0, A.length()));

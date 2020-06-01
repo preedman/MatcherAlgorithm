@@ -10,7 +10,7 @@ package com.reedmanit.jaccardinaindex;
  * @author paul
  */
 public interface SimularityAlgorithm {
-    
+
     public void calculate(CharSequence A, CharSequence B);
-    
+
 }

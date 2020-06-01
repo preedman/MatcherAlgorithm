@@ -20,8 +20,10 @@ public class Simularity implements SimularityAlgorithm {
     public Simularity() {
 
     }
+
     //
     // This is my way of calculating similarity score. Different from others
+    // This is a test comment
     //
     public void calculate(CharSequence A, CharSequence B) {
 
@@ -43,7 +45,7 @@ public class Simularity implements SimularityAlgorithm {
 
         }
 
-        for (int i = 0; i < lenA; i++) {  
+        for (int i = 0; i < lenA; i++) {
             for (int x = 0; x < lenB; x++) {
                 String p = String.valueOf(B.charAt(x));  // put the value of A and B into a string
                 String r = String.valueOf(A.charAt(i));
@@ -64,7 +66,5 @@ public class Simularity implements SimularityAlgorithm {
     public Double getSimilarScore() {
         return similarScore;
     }
-
-    
 
 }
